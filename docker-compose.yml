@@ -15,4 +15,4 @@ services:
       - .:/workspace
       - markdown-map-node-modules:/workspace/app/node_modules
       - markdown-map-pnpm-store:/workspace/.pnpm-store
-    working_dir: /workspace
+    working_dir: /workspace/app
