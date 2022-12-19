@@ -1,0 +1,18 @@
+version: '3'
+volumes:
+  markdown-map-node-modules:
+  markdown-map-pnpm-store:
+  
+services:
+  app:
+    build: .
+    tty: true
+    restart: always
+    command: yarn start:dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/workspace
+      - markdown-map-node-modules:/workspace/app/node_modules
+      - markdown-map-pnpm-store:/workspace/.pnpm-store
+    working_dir: /workspace
